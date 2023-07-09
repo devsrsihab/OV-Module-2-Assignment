@@ -8,7 +8,6 @@
 // const arr = [10, 20, 30, 40];
 // Output:
 // { name: 'John', age: 30 }
-
 function destructureExample(obj, arr) {
     const { name, age } = obj;
     const [val1, , val2] = arr;
@@ -26,10 +25,114 @@ function destructureExample(obj, arr) {
 // Example:
 // Input: sumNumbers(1, 2, 3, 4, 5);
 // Output:15
-
-
 function sumNumbers(...numbers) {
     return numbers.reduce((sum, number) => sum + number, 0);
   }
   console.log(sumNumbers(1, 2, 3, 4, 5));
   
+
+
+// Exercise 3
+// Write a function named createGreeting that takes in a name as a parameter and returns a greeting message using template literals. The message should be in the format: "Hello, [name]! Welcome to our website."
+// Example:
+// Input:
+// createGreeting('Alice');
+// Output: "Hello, Alice! Welcome to our website."
+function createGreeting(name) {
+  return `Hello, ${name}! Welcome to our website.`;
+}
+console.log(createGreeting('Alice'));
+
+ 
+// Exercise 4: 
+// Write a function named isEven that takes in a number as a parameter and returns the string "Even" if the number is even, and "Odd" if the number is odd. Use a ternary operator instead of an if/else statement.
+
+// Example:
+// Input: isEven(7);
+// Output:"Odd"
+function isEven(number) {
+    return number % 2 === 0 ? "Even" : "Odd";
+  }
+  console.log(isEven(7));
+
+  
+//   Exercise 5: 
+//   Convert the following function to an arrow function:
+  
+//   function multiply(a, b) {
+//     return a * b;
+//   }
+const multiply = (a, b) => a * b;
+console.log(multiply(3, 4));
+
+  
+// Exercise 6: 
+// Write a function named getLargestNumber that takes in two numbers as parameters. The function should return the larger number using short-circuiting and logical operators (&&, ||, ??).
+// Example:
+// Input: getLargestNumber(10, 5);
+// Output:10
+function getLargestNumber(a, b) {
+    return a > b ? a : b;
+  }
+  console.log(getLargestNumber(10, 5));
+  
+//   Exercise 7: 
+//   Write a function named getAddressCity that takes in an object representing a person's address. The address object has properties 'street', 'city', and 'country'. The function should return the value of the 'city' property if it exists, or the string "Unknown" if it doesn't exist, using optional chaining.
+//   Example:
+//   Input: const address = { street: '123 Main St', country: 'USA' };
+//   Output: "Unknown"
+function getAddressCity(address) {
+    return address.city ?? "Unknown";
+  }
+  const address = { street: '123 Main St', country: 'USA' };
+  console.log(getAddressCity(address));
+
+// Exercise 8: 
+// Write a function named doubleNumbers that takes in an array of numbers and returns a new array with each number doubled using the array map method.
+// Example:
+// Input: doubleNumbers([1, 2, 3, 4, 5]);
+// Output: [2, 4, 6, 8, 10]
+function doubleNumbers(numbers) {
+    return numbers.map(number => number * 2);
+  }
+console.log(doubleNumbers([1, 2, 3, 4, 5]));
+  
+
+// Exercise 9: 
+// Write a function named filterEvenNumbers that takes in an array of numbers and returns a new array with only the even numbers using the array filter method.
+// Example:
+// Input: filterEvenNumbers([1, 2, 3, 4, 5]);
+// Output: [2, 4]
+function filterEvenNumbers(numbers) {
+    return numbers.filter(number => number % 2 === 0);
+  }
+console.log(filterEvenNumbers([1, 2, 3, 4, 5]));
+
+// Exercise 10: 
+// Write a function named sumArray that takes in an array of numbers and returns the sum of all the numbers using the array reduce method.
+// Example:
+// nput: sumArray([1, 2, 3, 4, 5]);
+// Output: 1
+function sumArray(numbers) {
+    return numbers.reduce((sum, number) => sum + number, 0);
+  }
+console.log(sumArray([1, 2, 3, 4, 5]));
+  
+// Exercise 11: 
+// Write a function named sortNumbers that takes in an array of numbers and returns a new array with the numbers sorted in ascending order using the array sort method.
+// Example:
+// Input: sortNumbers([5, 2, 8, 1, 4]);
+// Output: [1, 2, 4, 5, 8]
+
+function sortNumbers(numbers) {
+    return numbers.sort((a, b) => a - b);
+  }
+console.log(sortNumbers([5, 2, 8, 1, 4]));
+  
+
+ 
+
+
+  
+  
+   
